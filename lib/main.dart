@@ -120,3 +120,13 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
+
+class PageContoh extends StatelessWidget {
+  const PageContoh({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
+  }
+}
