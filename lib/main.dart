@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_training_day1/pages/page_flex_list.dart';
+import 'package:flutter_training_day1/pages/page_material_design.dart';
+import 'package:flutter_training_day1/pages/page_responsif.dart';
 
 void main() {
   runApp(const MyApp());
@@ -106,9 +108,46 @@ class PageMain extends StatelessWidget {
                     backgroundColor: Colors.green.withOpacity(0.5),
                   ),
                 ),
+                InkWell(
+                  onTap: (){
+                    //navigator untuk pindah
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> PageResponsif()));
+                  },
+                  child: Chip(label: Text('Responsif Media Query'),
+                    backgroundColor: Colors.green.withOpacity(0.5),
+                  ),
+                ),
+                InkWell(
+                  onTap: (){
+                    //navigator untuk pindah
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> PageResponsifLayoutBuilder()));
+                  },
+                  child: Chip(label: Text('Responsif Layout'),
+                    backgroundColor: Colors.green.withOpacity(0.5),
+                  ),
+                ),
 
               ],
             ),
+            SizedBox(height: 10),
+            Wrap(
+              spacing: 8, // jarak horizontal antar item
+              runSpacing: 8, // jarak vertical antar baris
+              alignment: WrapAlignment.start, //start ==kiri
+              children: [
+                InkWell(
+                  onTap: (){
+                    //navigator untuk pindah
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> PageMaterialDesign()));
+                  },
+                  child: Chip(label: Text('Material Design'),
+                    backgroundColor: Colors.green.withOpacity(0.5),
+                  ),
+                ),
+
+              ]
+            ),
+
             SizedBox(height: 10),
             //Stack : widget yg bertumpuk
             Stack(
