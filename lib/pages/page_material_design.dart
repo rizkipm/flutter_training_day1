@@ -52,7 +52,7 @@ class _PageContentMaterialState extends State<PageContentMaterial> {
   static const List<Widget> _pages = [
     PageListVertical(),
     PageFlexList(),
-    PageSlilverWidget()
+    PageButtonMaterial()
   ];
   @override
   Widget build(BuildContext context) {
@@ -90,4 +90,75 @@ class _PageContentMaterialState extends State<PageContentMaterial> {
 
   }
 }
+
+class PageButtonMaterial extends StatelessWidget {
+  const PageButtonMaterial({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton(
+              onPressed: () {},
+              child: Text('Elevated Button'),
+            ),
+            SizedBox(height: 10,),
+            OutlinedButton(
+              onPressed: () {},
+              child: Text('Outlined Button'),
+            ),
+            SizedBox(height: 10,),
+            TextButton(
+              onPressed: () {},
+              child: Text('Text Button'),
+            ),
+            SizedBox(height: 10,),
+            IconButton(
+              onPressed: () {},
+              icon: Icon(Icons.favorite),
+            ),
+            SizedBox(height: 10,),
+            FloatingActionButton(
+              onPressed: () {},
+              child: Icon(Icons.fourteen_mp),
+            ),
+            SizedBox(height: 10,),
+            FilledButton(onPressed: () {  }, child: Text('Filled Button'),),
+            SizedBox(height: 10,),
+            OutlinedButton.icon(
+              onPressed: () {},
+              icon: Icon(Icons.camera),
+              label: Text('Outlined Button Icon'),
+            ),
+            SizedBox(height: 10,),
+            TextButton.icon(
+              onPressed: () {},
+              icon: Icon(Icons.browse_gallery),
+              label: Text('Text Button Icon'),
+            ),
+            SizedBox(height: 10,),
+            ElevatedButton.icon(
+              onPressed: () {},
+              icon: Icon(Icons.escalator),
+              label: Text('Elevated Button Icon'),
+            ),
+            SizedBox(height: 10,),
+            FilledButton.icon(
+              onPressed: () {},
+              icon: Icon(Icons.gamepad),
+              label: Text('Filled Button Icon'),
+            ),
+
+      ]
+        ),
+      ),
+    );
+  }
+}
+
+
+
 
